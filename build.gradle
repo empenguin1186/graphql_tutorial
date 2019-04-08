@@ -1,0 +1,23 @@
+plugins {
+	id 'org.springframework.boot' version '2.0.3.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'jp.co.penguin.graphql'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile "com.graphql-java:graphiql-spring-boot-starter:5.0.2"
+	compile "com.graphql-java:graphql-spring-boot-starter:5.0.2"
+	compile "com.graphql-java:graphql-java-tools:5.2.4"
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+}
