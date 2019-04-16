@@ -20,4 +20,6 @@ dependencies {
 	compile "com.graphql-java:graphql-java-tools:5.2.4"
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	// https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+	compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.11.0-beta2'
 }
