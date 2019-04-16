@@ -1,14 +1,37 @@
-type Author {
-    id: ID!
-    name: String!
-    books: [Book]!
+type User {
+    userId: String!
+
+    userName: String!
+
+    intro: String!
+
+    place: String!
+
+    birthDay: String!
+
+    imgUrl: String!
 }
 
-type Book {
-    id: ID!
-    name: String!
+input UserInput {
+    userId: String!
+
+    userName: String!
+
+    intro: String!
+
+    place: String!
+
+    birthDay: String!
+
+    imgUrl: String!
 }
 
 type Query {
-    author(id: ID!) : Author
+    getUserById(userId: String!): User
+}
+
+type Mutation {
+    createUser(input: UserInput!): Boolean!
+    updateUser(input: UserInput!): Boolean!
+    deleteUser(userId: String!): Boolean!
 }

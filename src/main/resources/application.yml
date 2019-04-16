@@ -1,0 +1,4 @@
+my-mongodb:
+  host: localhost
+  db: mydb
+  collection: users
